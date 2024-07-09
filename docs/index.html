@@ -44,7 +44,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
-<body>
+<div>
 
 
 <section class="hero">
@@ -209,8 +209,9 @@
 </section>
 <!-- End image carousel -->
 
-<div class="algorithm">
-    <div class="title">Algorithm: Training DRDM</div>
+<div class="algorithm-container">
+  <div class="algorithm">
+    <div class="title">Algorithm 1: Training DRDM</div>
     <div class="content">
         <p class="code">
             <strong>Input:</strong> Training set of source domain images <code>&#123;D<sup>src</sup>&#125;</code> &subseteq; <code>&#123;&#x211D;<sup>H x W x D</sup>&#125;</code><br>
@@ -219,20 +220,50 @@
         <div class="hrule"></div>
         <p class="code">
             1. Initialize the DRDM parameters <code>&#952;</code><br>
-            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge <br>
+            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge ;<br>
             <div class="content">
+                <p class="code">
                 <span class="code">// randomly sample the data</span><br>
-                2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code><br>
+                2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br>
                 2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
-                2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code> according to (2), (3) and (4)<br>
+                2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br>
                 <span class="code">// compute the prediction and the loss</span><br>
-                2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code> using (5)<br>
-                2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code> via (6)<br>
-                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code> via (7)<br>
+                2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code><br>
+                2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code><br>
+                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code><br>
+                </p>
             </div>
             3. Return model weights <code>&#952;</code>.
         </p>
     </div>
+  </div>
+  <div class="algorithm">
+    <div class="title">Algorithm 2: Training DRDM</div>
+    <div class="content">
+        <p class="code">
+            <strong>Input:</strong> Training set of source domain images <code>&#123;D<sup>src</sup>&#125;</code> &subseteq; <code>&#123;&#x211D;<sup>H x W x D</sup>&#125;</code><br>
+            <strong>Output:</strong> DRDM weights <code>&#952;</code>
+        </p>
+        <div class="hrule"></div>
+        <p class="code">
+            1. Initialize the DRDM parameters <code>&#952;</code><br>
+            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge ;<br>
+            <div class="content">
+                <p class="code">
+                <span class="code">// randomly sample the data</span><br>
+                2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br>
+                2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
+                2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br>
+                <span class="code">// compute the prediction and the loss</span><br>
+                2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code><br>
+                2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code><br>
+                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code><br>
+                </p>
+            </div>
+            3. Return model weights <code>&#952;</code>.
+        </p>
+    </div>
+  </div>
 </div>
 
 
@@ -379,5 +410,5 @@
 
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>
