@@ -212,7 +212,7 @@
 <div class="algorithm-container">
   <div class="algorithm">
     <div class="title">Algorithm 1: Training DRDM</div>
-    <div class="content">
+    <div class="bpcontent">
         <p class="pcode">
             <strong>Input:</strong> Training set of source domain images <code>&#123;D<sup>src</sup>&#125;</code> &subseteq; <code>&#123;&#x211D;<sup>H x W x D</sup>&#125;</code><br>
             <strong>Output:</strong> DRDM weights <code>&#952;</code>
@@ -220,8 +220,8 @@
         <div class="hrule"></div>
         <p class="pcode">
             1. Initialize the DRDM parameters <code>&#952;</code>;<br>
-            2. <strong>While</strong> <code>&#x2111;<sub>diff</sub></code> not converge:
-            <div class="content">
+            2. <strong>While</strong> the loss <code>&#x2111;<sub>diff</sub></code> not converge:
+            <div class="bpcontent">
                 <p class="pcode">
                 <span class="comment">// randomly sample the data</span><br>
                 2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br>
@@ -240,7 +240,7 @@
 
   <div class="algorithm">
         <div class="title">Algorithm 2: Instance Deformation via DRDM</div>
-        <div class="content">
+        <div class="bpcontent">
             <p class="pcode">
                 <strong>Input:</strong> Images for deformation <code>I<sub>0</sub> &in; &#x211D;<sup>H &times; W &times; D</sup></code><br>
                 <strong>Output:</strong> Generated DDF <code>&#x3C6;</code>
@@ -256,7 +256,7 @@
                 6. Set the initial image for deformation recovery: <code>&#x3C6; &#x2190; I<sub>T'</sub></code>;<br>
                 <span class="comment">// deformation recovery process</span><br>
                 7. <strong>For</strong> <code>t = T', T'-1, ..., 1</code>:
-                <div class="content">
+                <div class="bpcontent">
                     7.1. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
                     7.2. Update the deformation: <code>&#x3C6; &#x2190; &#x3C8;<sub>t</sub> &#x2218; &#x3C6;</code>;<br>
                     7.3. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t-1</sub></code>;<br>
