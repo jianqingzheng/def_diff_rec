@@ -169,3 +169,29 @@ body {
 
 
 
+.algorithm {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 20px;
+}
+
+.algorithm .title {
+    font-weight: bold;
+}
+
+.algorithm .content {
+    margin-left: 20px;
+}
+
+.algorithm .hrule {
+    border-top: 1px solid #000;
+    margin: 5px 0;
+}
+
+.algorithm .code {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.content {
+    margin-left: 20px;
+}

@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>RAN Project Page</title>
+  <title>DRDM Project Page</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,7 +52,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Deformation-Recovery Diffusion Model (DRDM):<br /> <small>Deformation for Image Manipulation and Synthesis</small></h1>
+          <h1 class="title is-1 publication-title">Deformation-Recovery Diffusion Model<br /> (DRDM): <small>Deformation for Image Manipulation and Synthesis</small></h1>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
             <span class="author-block"><a href="https://jianqingzheng.github.io/" target="_blank">Jian-Qing Zheng</a><sup>*†</sup>,</span>
@@ -84,7 +84,7 @@
               </span>
               <!-- Published paper -->
               <span class="link-block">
-                <a href="https://doi.org/10.1016/j.media.2023.103038" target="_blank"
+                <a href="" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
@@ -92,20 +92,9 @@
                 <span>Paper</span>
                 </a>
               </span>
-<!--              &lt;!&ndash; Supplementary PDF link &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
-<!--                class="external-link button is-normal is-rounded is-dark">-->
-<!--                <span class="icon">-->
-<!--                  <i class="fas fa-file-pdf"></i>-->
-<!--                </span>-->
-<!--                <span>Supplementary</span>-->
-<!--                </a>-->
-<!--              </span>-->
-
               <!-- Github link -->
               <span class="link-block">
-                <a href="https://github.com/jianqingzheng/res_aligner_net" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/jianqingzheng/def_diff_rec" target="_blank" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
@@ -114,7 +103,7 @@
               </span>
               <!-- Colab link -->
               <span class="link-block">
-                <a href="https://colab.research.google.com/github/jianqingzheng/res_aligner_net/blob/main/res_aligner_net.ipynb" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb" target="_blank" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
 <!--                  <i class="fab fa-google"></i>-->
                   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Colab</title><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.1232 9.8068l2.395-2.395a3.6455 3.6455 0 0 1 5.1497-5.1478l2.397-2.3989a7.033 7.033 0 0 0-4.8877-1.9297zM7.07 4.9855a7.033 7.033 0 0 0-4.8878 1.9316l2.3911 2.3911a3.6434 3.6434 0 0 1 5.0227.1271l1.7341-2.9737-.0997-.0802A7.033 7.033 0 0 0 7.07 4.9855zm15.0093 2.1721l-2.3892 2.3911a3.6455 3.6455 0 0 1-5.1497 5.1497l-2.4067 2.4068a7.0362 7.0362 0 0 0 9.9456-9.9476zM1.932 7.1674a7.033 7.033 0 0 0-.002 9.6816l2.397-2.397a3.6434 3.6434 0 0 1-.004-4.8916zm7.664 7.4235c-1.38 1.3816-3.5863 1.411-5.0168.1134l-2.397 2.395c2.4693 2.3328 6.263 2.5753 9.0072.5455l.1368-.1115z"/></svg>
@@ -185,77 +174,108 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="method-carousel" class="carousel results-carousel">
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/networks_types.png" alt="MY ALT TEXT"/>
+        <img src="static/images/different_diff.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Fig. 1: The registration framework of our proposed Motion-Separable or
-          Feature Pyramid (MS/FP) based Residual Aligner Network (RAN) structure,
-          Direct Regression (DR), Attention-based registration, and Cascaded
-          (Cas) network. The MS or FP backbone networks (the difference detailed
-          in Fig. 3) extract the features and output feature maps and the stacked
-          Residual Aligner modules (see more in Fig. 4) align and connect the data
-          streams from the input images.
+          Fig. 1: (a) Diffusion model based on intensity/score can synthesize realistic images, but without a known relationship with other existing real subjects, and thus unknown labels; (b) DRDM deforms realistic images with generated deformation, representing the anatomical changes, which can also be applied to pixel-wise labels, thus benefiting downstream tasks.
         </h2>
-      </div>
+        </div>
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/motion_sep.png" alt="MY ALT TEXT"/>
+        <img src="static/images/drdm_framework.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Fig. 2: Illustration of the motion inseparable problem in the coarse-to-fine
-          alignment of two neighbouring organs, with differing motions of two exemplar
-          points (× and △). (a) Failed capture of point △ is due to the lowresolution
-          feature pyramid. (b) Our proposed solution utilizes upsampling
-          layers + dilated convolutions in the Motion-Separable structure to improve
-          the differentiation of different organs’ motions (analyzed in Sec. 2 and detailed
-          in Fig. 3), and a Multi-Head mask (detailed in Fig. 4) to disentangle
-          the motions of different organs, while maintaing the same receptive field.
+          Fig. 2: The framework of the DRDM model includes deformation diffusing and recovering processes. The deformation diffusing process is to randomly deform images in the deformation space, and the deformation recovery is to estimate the deformation recursively using DRDM to generate a deformed image in the real deformation manifold.
         </h2>
-      </div>
+        </div>
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/mafcn.png" alt="MY ALT TEXT"/>
+        <img src="static/images/def_diff_proc.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Fig. 3: The design and theoretical analysis of Fully Convolution Networks
-          (FCN) backbone for feature extraction. (a) Motion-Separable Structures
-          designed with a varying number of motion-separable layers q, where the
-          feature maps from the encoder part are upsampled and concatenated to
-          the decoder part, (b) with different hyper-parameter setting, showing that
-          a higher q, (c) with almost the same ak, achieves a higher area under the
-          curve of the motion separability bottleneck Δ∞(p), referring to Eq. (4) and
-          Eq. (8) (unit: pix/vox).
+          Fig. 3: The illustration of the principle for multi-scale random DVF creating and integrating in the deformation diffusion process.
         </h2>
-     </div>
+        </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/def_diff_proc.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Fig. 4: (a) DRDM is trained with each time step using distance- and angle-based loss function, according to Algorithm 1. (b) the deformation fields are estimated with varying time step by the trained DRDM and integrated to generate the final deformation &phi; according to Algorithm 2.
+        </h2>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End image carousel -->
 
+<div class="algorithm">
+    <div class="title">Algorithm: Training DRDM</div>
+    <div class="content">
+        <p class="code">
+            <strong>Input:</strong> Training set of source domain images <code>&#123;D<sup>src</sup>&#125;</code> &subseteq; <code>&#123;&#x211D;<sup>H x W x D</sup>&#125;</code><br>
+            <strong>Output:</strong> DRDM weights <code>&#952;</code>
+        </p>
+        <div class="hrule"></div>
+        <p class="code">
+            1. Initialize the DRDM parameters <code>&#952;</code><br>
+            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge <br>
+            <div class="content">
+                <span class="code">// randomly sample the data</span><br>
+                2.1. Sample the original images: <code>&#123;&#x1D440;&#x1D448;&#x1D6FC;&#x1D448;&#x1D69A;&#x1D448;&#x1D6FD;&#x1D448;&#x1D450;&#x1D448;&#x1D444;&#x1D448;&#x1D69A;&#x1D448;&#x1D6FD;&#x1D448;&#x1D450;&#x1D448;&#x1D44B;&#x1D44C;&#x1D448;</code> &in; <code>&#123;D<sup>src</sup>&#125;</code><br>
+                2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
+                2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code> according to (2), (3) and (4)<br>
+                <span class="code">// compute the prediction and the loss</span><br>
+                2.4. Deform original images from <code>&#123;&#x1D440;&#x1D448;&#x1D6FC;&#x1D448;&#x1D69A;&#x1D448;&#x1D6FD;&#x1D448;&#x1D450;&#x1D448;&#x1D444;&#x1D448;&#x1D69A;&#x1D448;&#x1D6FD;&#x1D448;&#x1D450;&#x1D448;&#x1D44B;&#x1D44C;&#x1D448;</code> to <code>&#123;&#x1D440;&#x1D448;&#x1D6FC;&#x1D448;&#x1D69A;&#x1D448;&#x1D6FD;&#x1D448;&#x1D450;&#x1D448;&#x1D44B;&#x1D44C;&#x1D448;</code> using (5)<br>
+                2.5. Use DRDM <code>&#123;D<sub>&#952;</sub>&#125;</code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code> via (6)<br>
+                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code> via (7)<br>
+            </div>
+            3. Return model weights <code>&#952;</code>.
+        </p>
+    </div>
+</div>
+
+
+<!--&lt;!&ndash; Youtube video &ndash;&gt;-->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          <img src="static/images/deformable_reg.gif" alt="sym" title="One registration example.">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End youtube video &ndash;&gt;-->
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- Image carousel -->
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <img src="static/images/deformable_reg.gif" alt="sym" title="One registration example.">
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/examples_2d.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Fig. 8: The original and deformed images of five subjects by DRDM for 2D cardiac MRI scans.
+        </h2>
+        </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/examples_3d.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Fig. 9: The lung shape and the three cross-sections (frontal, sagittal, and transverse) through the center of the image in three directions for original and deformed images of three subjects by DRDM for 3D pulmonary CT scans.
+        </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
+<!-- End image carousel -->
 
 <!--&lt;!&ndash; Video carousel &ndash;&gt;-->
 <!--<section class="hero is-small">-->
