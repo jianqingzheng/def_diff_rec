@@ -184,7 +184,7 @@ body {
     box-sizing: border-box;
     min-width: 400px; /* Minimum width for an algorithm box */
     /*min-width: 40%;*/
-    width: 45%;
+    width: 40%;
 }
 
 .algorithm .title {
