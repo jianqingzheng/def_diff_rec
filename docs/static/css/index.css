@@ -177,13 +177,13 @@ body {
 }
 
 .algorithm {
-    border: 1px solid #000;
+    border: 2px solid #000;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     flex: 1 1 calc(50% - 40px); /* Adjusts the width to fit two algorithms side by side */
     box-sizing: border-box;
     min-width: 300px; /* Minimum width for an algorithm box */
-    max-width: 50%;
+    max-width: 60%;
 }
 
 .algorithm .title {
@@ -208,4 +208,5 @@ body {
 
 .algorithm .comment {
     font-family: Arial, sans-serif;
+    color: darkgreen;
 }
