@@ -131,7 +131,7 @@
 <!--      <div class='paper-box-image'>-->
       <div class="container">
 <!--        <div>-->
-        <div class="badge">Medical Image Analysis 2024</div>
+        <div class="badge">Preprint</div>
         <img src="static/images/Graphic_abstract.jpg" alt="sym" title="The graphic abstract of Residual Aligner Network.">
 <!--        </div>-->
       </div>
@@ -228,9 +228,9 @@
                 2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
                 2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br>
                 <span class="comment">// compute the prediction and the loss</span><br>
-                2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code><br>
-                2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code><br>
-                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code><br>
+                2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code>;<br>
+                2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
+                2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code>;<br>
                 </p>
             </div>
             3. Return model weights <code>&#952;</code>.
@@ -257,7 +257,7 @@
                 <span class="comment">// deformation recovery process</span><br>
                 7. <strong>For</strong> <code>t = T', T'-1, ..., 1</code>:<br>
                 <div class="content">
-                    7.1. Use DRDM <code>&#120131;<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
+                    7.1. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
                     7.2. Update the deformation according to (7): <code>&#x3C6; &#x2190; &#x3C8;<sub>t</sub> &#x2218; &#x3C6;</code>;<br>
                     7.3. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t-1</sub></code>;<br>
                 </div>
