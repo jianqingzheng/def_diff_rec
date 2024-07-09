@@ -238,6 +238,33 @@
     </div>
   </div>
 
+  <div class="algorithm">
+        <div class="title">Algorithm 2: Instance Deformation via DRDM</div>
+        <div class="content">
+            <p class="pcode">
+                <strong>Input:</strong> Images for deformation <code>I<sub>0</sub> &in; &#x211D;<sup>H &times; W &times; D</sup></code><br>
+                <strong>Output:</strong> Generated DDF <code>&#x3C6;</code>
+            </p>
+            <div class="hrule"></div>
+            <p class="pcode">
+                1. Import the DRDM parameters <code>&#952;</code> from Algorithm 1;<br>
+                2. Set the deformation level <code>T' &le; T</code>;<br>
+                <span class="comment">// deformation diffusion process</span><br>
+                3. Sample a random DDF <code>&#x3C8;<sub>T':1</sub></code>;<br>
+                4. Set the initial DDF for deformation recovery: <code>&#x3C6; &#x2190; &#x3C8;<sub>T':1</sub></code>;<br>
+                5. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>T'</sub></code>;<br>
+                6. Set the initial image for deformation recovery: <code>&#x3C6; &#x2190; I<sub>T'</sub></code>;<br>
+                <span class="comment">// deformation recovery process</span><br>
+                7. <strong>For</strong> <code>t = T', T'-1, ..., 1</code>:<br>
+                <div class="content">
+                    7.1. Use DRDM <code>&#120131;<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
+                    7.2. Update the deformation according to (7): <code>&#x3C6; &#x2190; &#x3C8;<sub>t</sub> &#x2218; &#x3C6;</code>;<br>
+                    7.3. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t-1</sub></code>;<br>
+                </div>
+                8. Return the generated deformation <code>&#x3C6;</code>.
+            </p>
+        </div>
+    </div>
 </div>
 
 
