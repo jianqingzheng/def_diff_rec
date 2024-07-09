@@ -55,16 +55,19 @@
           <h1 class="title is-1 publication-title">Deformation-Recovery Diffusion Model (DRDM):<br /> Instance Deformation for Image Manipulation and Synthesis</h1>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
-            <span class="author-block"><a href="https://jianqingzheng.github.io/" target="_blank">Jian-Qing Zheng</a><sup>†</sup>,</span>
+            <span class="author-block"><a href="https://jianqingzheng.github.io/" target="_blank">Jian-Qing Zheng</a><sup>*†</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/yuanhan-mo-7905531a0/" target="_blank">Yuanhan Mo</a><sup>*</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.co.uk/citations?user=-NuodQ8AAAAJ" target="_blank">Yang Sun</a>,</span>
+            <span class="author-block"><a href="https://www.ndph.ox.ac.uk/team/jiahua-li" target="_blank">Jiahua Li</a>,</span>
+            <span class="author-block"><a href="https://fupingwu90.github.io/cv/" target="_blank">Fuping Wu</a>,</span>
             <span class="author-block"><a href="https://www.zywang.site/" target="_blank">Ziyang Wang</a>,</span>
-            <span class="author-block"><a href="https://baoru.netlify.app/" target="_blank">Baoru Huang</a>,</span>
-            <span class="author-block"><a href="https://scholar.google.co.uk/citations?user=jMFx-usAAAAJ" target="_blank">Ngee Han Lim</a>,</span>
+            <span class="author-block"><a href="https://www.kennedy.ox.ac.uk/team/tonia-vincent" target="_blank">Tonia Vincent</a>,</span>
             <span class="author-block"><a href="https://www.bdi.ox.ac.uk/Team/bartek-papiez" target="_blank">Bartłomiej W. Papież</a></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">University of Oxford, Imperial College London</span>
-<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+            <span class="author-block">University of Oxford</span>
+            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Corresponding Author</small></span>
           </div>
 
@@ -176,7 +179,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Deformable image registration, the estimation of the spatial transformation between different images, is an important task in medical imaging. Deep learning techniques have been shown to perform 3D image registration efficiently. However, current registration strategies often only focus on the deformation smoothness, which leads to the ignorance of complicated motion patterns (e.g., separate or sliding motions), especially for the intersection of organs. Thus, the performance when dealing with the discontinuous motions of multiple nearby objects is limited, causing undesired predictive outcomes in clinical usage, such as misidentification and mislocalization of lesions or other abnormalities. Consequently, we proposed a novel registration method to address this issue: a new Motion Separable backbone is exploited to capture the separate motion, with a theoretical analysis of the upper bound of the motions’ discontinuity provided. In addition, a novel Residual Aligner module was used to disentangle and refine the predicted motions across the multiple neighboring objects/organs. We evaluate our method, Residual Aligner-based Network (RAN), on abdominal Computed Tomography (CT) scans and it has shown to achieve one of the most accurate unsupervised inter-subject registration for the 9 organs, with the highest-ranked registration of the veins (Dice Similarity Coefficient (%)/Average surface distance (mm): 62%/4.9mm for the vena cava and 34%/7.9mm for the portal and splenic vein), with a smaller model structure and less computation compared to state-of-the-art methods. Furthermore, when applied to lung CT, the RAN achieves comparable results to the best-ranked networks (94%/3.0mm), also with fewer parameters and less computation.
+            In medical imaging, the diffusion models have shown great potential in synthetic image generation tasks. However, these models often struggle with the interpretable connections between the generated and existing images and could create illusions. To address these challenges, our research proposes a novel diffusion-based generative model based on deformation diffusion and recovery. This model, named Deformation-Recovery Diffusion Model (DRDM), diverges from traditional score/intensity and latent feature-based approaches, emphasizing morphological changes through deformation fields rather than direct image synthesis.
+            This is achieved by introducing a topological-preserving deformation field generation method, which randomly samples and integrates a set of multi-scale Deformation Vector Fields (DVF). DRDM is trained to learn to recover unreasonable deformation components, thereby restoring each randomly deformed image to a realistic distribution. These innovations facilitate the generation of diverse and anatomically plausible deformations, enhancing data augmentation and synthesis for further analysis in downstream tasks, such as few-shot learning and image registration.
+            Experimental results in cardiac MRI and pulmonary CT shows DRDM is capable of creating diverse, large (over 10% image size deformation scale) and high-quality (negative ratio of folding rate is lower than 1%) deformation fields.
+            The further experimental results in downstream tasks, 2D image segmentation and 3D image registration, indicate significant improvements resulting from DRDM, showcasing the potential of our model to advance image manipulation and synthesis in medical imaging and beyond.
           </p>
         </div>
       </div>
