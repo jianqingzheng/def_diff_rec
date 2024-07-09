@@ -218,16 +218,16 @@
             <strong>Output:</strong> DRDM weights <code>&#952;</code>
         </p>
         <div class="hrule"></div>
-        <p class="code">
-            1. Initialize the DRDM parameters <code>&#952;</code><br>
-            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge ;<br>
+        <p class="pcode">
+            1. Initialize the DRDM parameters <code>&#952;</code>;<br>
+            2. <strong>While</strong> <code>&#123;&#x2111;<sub>diff</sub>&#125;</code> not converge:<br>
             <div class="content">
-                <p class="code">
-                <span class="code">// randomly sample the data</span><br>
+                <p class="pcode">
+                <span class="comment">// randomly sample the data</span><br>
                 2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br>
                 2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
                 2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br>
-                <span class="code">// compute the prediction and the loss</span><br>
+                <span class="comment">// compute the prediction and the loss</span><br>
                 2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code><br>
                 2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code><br>
                 2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#123;&#x2111;<sub>diff</sub>&#125;</code><br>
@@ -237,6 +237,7 @@
         </p>
     </div>
   </div>
+
   <div class="algorithm">
     <div class="title">Algorithm 2: Training DRDM</div>
     <div class="content">

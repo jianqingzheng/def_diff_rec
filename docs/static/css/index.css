@@ -183,6 +183,7 @@ body {
     flex: 1 1 calc(50% - 40px); /* Adjusts the width to fit two algorithms side by side */
     box-sizing: border-box;
     min-width: 300px; /* Minimum width for an algorithm box */
+    max-width: 50%;
 }
 
 .algorithm .title {
@@ -191,6 +192,9 @@ body {
 
 .algorithm .content {
     margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .algorithm .hrule {
@@ -198,10 +202,10 @@ body {
     margin: 5px 0;
 }
 
-.algorithm .code {
+.algorithm .pcode {
     font-family: "Courier New", Courier, monospace;
 }
 
-.algorithm .content {
-    margin-left: 20px;
+.algorithm .comment {
+    font-family: Arial, sans-serif;
 }
