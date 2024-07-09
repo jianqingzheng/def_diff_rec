@@ -182,9 +182,9 @@ body {
     margin: 10px;
     flex: 1 1 calc(50% - 40px); /* Adjusts the width to fit two algorithms side by side */
     box-sizing: border-box;
-    /*min-width: 360px; !* Minimum width for an algorithm box *!*/
-    min-width: 40%;
-    width: 1600px;
+    min-width: 360px; /* Minimum width for an algorithm box */
+    /*min-width: 40%;*/
+    width: 75%;
 }
 
 .algorithm .title {
