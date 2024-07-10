@@ -174,7 +174,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .algorithm {
