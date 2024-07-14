@@ -19,7 +19,7 @@ Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformatio
 
 ## 0. Brief Intro ##
 
-![header](docs/static/images/Graphic_abstract.png)
+![header](docs/static/images/graphic_abstract.png)
 The research in this paper focuses on solving the problem of multi-organ discontinuous deformation alignment. An innovative quantitative metric, Motion Separability, is proposed in the paper. This metric is designed to measure the ability of deep learning networks to predict organ discontinuous deformations. Based on this metric, a novel network structure skeleton, the Motion-Separable structure, is designed. In addition, we introduce a Motion disentanglement module to help the network distinguish and process complex motion patterns among different organs.
 
 This research proposes a novel diffusion generative model based on deformation diffusion-and-recovery, which is a deformation-centric version of the noising and denoising process.
