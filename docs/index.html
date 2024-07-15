@@ -52,7 +52,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Deformation-Recovery Diffusion Model (DRDM):<br /> <small>Deformation for Image Manipulation and Synthesis</small></h1>
+          <h1 class="title is-2 publication-title">Deformation-Recovery Diffusion Model (DRDM):<br /> <small>Instance Deformation for Image Manipulation and Synthesis</small></h1>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
             <span class="author-block"><a href="https://jianqingzheng.github.io/" target="_blank">Jian-Qing Zheng</a><sup>*†</sup>,</span>
@@ -159,7 +159,7 @@
           <p>
             In medical imaging, the diffusion models have shown great potential in synthetic image generation tasks. However, these models often struggle with the interpretable connections between the generated and existing images and could create illusions. To address these challenges, our research proposes a novel diffusion-based generative model based on deformation diffusion and recovery. This model, named Deformation-Recovery Diffusion Model (DRDM), diverges from traditional score/intensity and latent feature-based approaches, emphasizing morphological changes through deformation fields rather than direct image synthesis.
             This is achieved by introducing a topological-preserving deformation field generation method, which randomly samples and integrates a set of multi-scale Deformation Vector Fields (DVF). DRDM is trained to learn to recover unreasonable deformation components, thereby restoring each randomly deformed image to a realistic distribution. These innovations facilitate the generation of diverse and anatomically plausible deformations, enhancing data augmentation and synthesis for further analysis in downstream tasks, such as few-shot learning and image registration.
-            Experimental results in cardiac MRI and pulmonary CT shows DRDM is capable of creating diverse, large (over 10% image size deformation scale) and high-quality (negative ratio of folding rate is lower than 1%) deformation fields.
+            Experimental results in cardiac MRI and pulmonary CT show DRDM is capable of creating diverse, large (over 10% image size deformation scale), and high-quality (negative ratio of folding rate is lower than 1%) deformation fields.
             The further experimental results in downstream tasks, 2D image segmentation and 3D image registration, indicate significant improvements resulting from DRDM, showcasing the potential of our model to advance image manipulation and synthesis in medical imaging and beyond.
           </p>
         </div>
