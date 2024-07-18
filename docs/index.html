@@ -355,8 +355,8 @@
         <div class="title">Algorithm 3: Data Augmentation via DRDM</div>
         <div class="bpcontent">
             <p class="pcode">
-                <strong>Input:</strong> Images and labels for deformation <code>D<sup>tgt</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x C</sup></code><br>
-                <strong>Output:</strong> Deformed pairs of image and label <code>D<sup>aug</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x C</sup></code>
+                <strong>Input:</strong> Images and labels <code>D<sup>tgt</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x C</sup></code><br>
+                <strong>Output:</strong> Deformed images and labels <code>D<sup>aug</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x C</sup></code>
             </p>
             <div class="hrule"></div>
             <div class="pcode">
@@ -371,8 +371,8 @@
                         4.1. <strong>ForEach</strong> <code>T' &in; &#x2111;</code>:
                         <div class="bpcontent">
                             4.1.1. Generate DDF <code>&#x3C6;</code> using Algorithm 2;<br>
-                            4.1.2. Deform the sampled image: <code>&#x3C6;(I<sub>0</sub>) &#x2192; &#x3C6;</code>;<br>
-                            4.1.3. Deform the sampled label: <code>&#x3C6;(L<sub>0</sub>) &#x2192; &#x3C6;</code>;<br>
+                            4.1.2. Deform the sampled image: <code>&#x3C6;(I<sub>0</sub>)</code>;<br>
+                            4.1.3. Deform the sampled label: <code>&#x3C6;(L<sub>0</sub>)</code>;<br>
                             4.1.4. Append the deformed image and label into the output set: <code>D<sup>aug</sup> &#x2190; D<sup>aug</sup> &#x222A; {(&#x3C6;(I<sub>0</sub>), &#x3C6;(L<sub>0</sub>))}</code>;
                         </div>
                     </p>
@@ -383,29 +383,35 @@
     </div>
 
     <div class="algorithm">
-        <div class="title">Algorithm 2: Instance Deformation via DRDM</div>
+        <div class="title">Algorithm 4: Data Synthesis via DRDM</div>
         <div class="bpcontent">
             <p class="pcode">
-                <strong>Input:</strong> Images for deformation <code>I<sub>0</sub> &in; &#x211D;<sup>H &times; W &times; D</sup></code><br>
-                <strong>Output:</strong> Generated DDF <code>&#x3C6;</code>
+                <strong>Input:</strong> Images <code>D<sup>tgt</sup> &subset; &#x211D;<sup>H x W x D</sup></code><br>
+                <strong>Output:</strong> Deformed images and DDF <code>D<sup>syn</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x 3</sup></code>
             </p>
             <div class="hrule"></div>
             <div class="pcode">
                 1. Import the DRDM parameters <code>&#952;</code> from Algorithm 1;<br>
-                2. Set the deformation level <code>T' &le; T</code>;<br>
-                <span class="comment">// deformation diffusion process</span><br>
-                3. Sample a random DDF <code>&#x3C8;<sub>T':1</sub></code>;<br>
-                4. Set the initial DDF for deformation recovery: <code>&#x3C6; &#x2190; &#x3C8;<sub>T':1</sub></code>;<br>
-                5. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>T'</sub></code>;<br>
-                6. Set the initial image for deformation recovery: <code>&#x3C6; &#x2190; I<sub>T'</sub></code>;<br>
-                <span class="comment">// deformation recovery process</span><br>
-                7. <strong>For</strong> <code>t = T', T'-1, ..., 1</code>:
+                2. Set a set of deformation levels <code>&#x2111;</code> &subseteq; <code>&#8484;<sub>+</sub> &times; &#8484;<sub>+</sub></code>;<br>
+                3. Initialize the output set <code>D<sup>syn</sup> &#x2190; &#8709;</code>;<br>
+                <span class="comment">// Sample an image</span><br>
+                4. <strong>ForEach</strong> <code>I<sub>0</sub></code> &in; <code>D<sup>tgt</sup></code>:
                 <div class="bpcontent">
-                    7.1. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
-                    7.2. Update the deformation: <code>&#x3C6; &#x2190; &#x3C8;<sub>t</sub> &#x2218; &#x3C6;</code>;<br>
-                    7.3. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t-1</sub></code>;<br>
+                    <p class="pcode">
+                        <span class="comment">// Sample deformation level numbers</span><br>
+                        4.1. <strong>ForEach</strong> <code>(T'<sub>aug</sub>,T'<sub>syn</sub>)</code> &in; <code>&#x2111;</code>:
+                        <div class="bpcontent">
+                            <span class="comment">// Create the moving image</span><br>
+                            4.1.1. Generate DDF <code>&#x3C6;<sub>aug</sub></code> based on <code>(I<sub>0</sub>,T'<sub>aug</sub>)</code> using Algorithm 2;<br>
+                            4.1.2. Deform the sampled image: <code>&#x3C6;<sub>aug</sub>(I<sub>0</sub>) &#x2192; I<sub>mv</sub></code>;<br>
+                            <span class="comment">// Create the fixed image and DDF</span><br>
+                            4.1.3. Generate DDF <code>&#x3C6;<sub>syn</sub></code> based on <code>(I<sub>mv</sub>,T'<sub>syn</sub>)</code> using Algorithm 2;<br>
+                            4.1.4. Deform the sampled image: <code>&#x3C6;<sub>syn</sub> &#x2218; &#x3C6;<sub>aug</sub>(I<sub>0</sub>) &#x2192; I<sub>fx</sub></code>;<br>
+                            4.1.5. Append the deformed images and the DDF: <code>D<sup>syn</sup> &#x2190; D<sup>syn</sup> &#x222A; {(I<sub>mv</sub>, I<sub>fx</sub>, &#x3C6;<sub>syn</sub>)}</code>;
+                        </div>
+                    </p>
                 </div>
-                8. Return the generated deformation <code>&#x3C6;</code>.
+                5. Return the output set <code>D<sup>syn</sup></code>.
             </div>
         </div>
     </div>
