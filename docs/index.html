@@ -359,23 +359,23 @@
                 <strong>Output:</strong> DRDM weights <code>&#952;</code>
             </p>
             <div class="hrule"></div>
-            <p class="pcode">
-                1. Initialize the DRDM parameters <code>&#952;</code>;<br>
+            <div class="pcode">
+                1. Initialize the DRDM parameters <code>&#952;</code>;<br />
                 2. <strong>While</strong> the loss <code>&#x2111;<sub>diff</sub></code> not converge:
                 <div class="bpcontent">
                     <p class="pcode">
                     <span class="comment">// randomly sample the data</span><br>
-                    2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br>
+                    2.1. Sample the original images: <code>I<sub>0</sub></code> &in; <code>D<sup>src</sup></code>;<br />
                     2.2. Sample time steps: <code>t &sim; U(0,T) &cap; Z</code><br>
-                    2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br>
+                    2.3. Sample random DVFs <code>&#x3C8;<sub>t</sub></code> and DDFs <code>&#x3C8;<sub>t:1</sub></code>;<br />
                     <span class="comment">// compute the prediction and the loss</span><br>
-                    2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code>;<br>
-                    2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br>
-                    2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#x2111;<sub>diff</sub></code>;<br>
+                    2.4. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t</sub></code>;<br />
+                    2.5. Use DRDM <code>D<sub>&#952;</sub></code> to estimate recovering deformation <code>&#x3C8;<sub>t</sub></code>;<br />
+                    2.6. Update gradient descent step <code>&#x2207;<sub>&#952;</sub>&#x2111;<sub>diff</sub></code>;<br />
                     </p>
                 </div>
                 3. Return model weights <code>&#952;</code>.
-            </p>
+            </div>
         </div>
     </div>
 
@@ -387,7 +387,7 @@
                 <strong>Output:</strong> Generated DDF <code>&#x3C6;</code>
             </p>
             <div class="hrule"></div>
-            <p class="pcode">
+            <div class="pcode">
                 1. Import the DRDM parameters <code>&#952;</code> from Algorithm 1;<br>
                 2. Set the deformation level <code>T' &le; T</code>;<br>
                 <span class="comment">// deformation diffusion process</span><br>
@@ -403,9 +403,10 @@
                     7.3. Deform original images from <code>I<sub>0</sub></code> to <code>I<sub>t-1</sub></code>;<br>
                 </div>
                 8. Return the generated deformation <code>&#x3C6;</code>.
-            </p>
+            </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>
