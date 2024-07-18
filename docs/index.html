@@ -352,7 +352,7 @@
 <div class="container">
 <div class="algorithm-container">
     <div class="algorithm">
-        <div class="title">Algorithm 3: Data Augmentation via DRDM</div>
+        <div class="title">Algorithm 3: Data Augmentation (for segmentation) via DRDM</div>
         <div class="bpcontent">
             <p class="pcode">
                 <strong>Input:</strong> Images and labels <code>D<sup>tgt</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x C</sup></code><br>
@@ -383,11 +383,11 @@
     </div>
 
     <div class="algorithm">
-        <div class="title">Algorithm 4: Data Synthesis via DRDM</div>
+        <div class="title">Algorithm 4: Data Synthesis (for registration) via DRDM</div>
         <div class="bpcontent">
             <p class="pcode">
                 <strong>Input:</strong> Images <code>D<sup>tgt</sup> &subset; &#x211D;<sup>H x W x D</sup></code><br>
-                <strong>Output:</strong> Deformed images and DDF <code>D<sup>syn</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x 3</sup></code>
+                <strong>Output:</strong> Paired images & DDF <code>D<sup>syn</sup> &subset; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D</sup> &times; &#x211D;<sup>H x W x D x 3</sup></code>
             </p>
             <div class="hrule"></div>
             <div class="pcode">
@@ -403,10 +403,10 @@
                         <div class="bpcontent">
                             <span class="comment">// Create the moving image</span><br>
                             4.1.1. Generate DDF <code>&#x3C6;<sub>aug</sub></code> based on <code>(I<sub>0</sub>,T'<sub>aug</sub>)</code> using Algorithm 2;<br>
-                            4.1.2. Deform the sampled image: <code>&#x3C6;<sub>aug</sub>(I<sub>0</sub>) &#x2192; I<sub>mv</sub></code>;<br>
+                            4.1.2. Deform the sampled image: <code>I<sub>mv</sub> &#x2190; &#x3C6;<sub>aug</sub>(I<sub>0</sub>)</code>;<br>
                             <span class="comment">// Create the fixed image and DDF</span><br>
                             4.1.3. Generate DDF <code>&#x3C6;<sub>syn</sub></code> based on <code>(I<sub>mv</sub>,T'<sub>syn</sub>)</code> using Algorithm 2;<br>
-                            4.1.4. Deform the sampled image: <code>&#x3C6;<sub>syn</sub> &#x2218; &#x3C6;<sub>aug</sub>(I<sub>0</sub>) &#x2192; I<sub>fx</sub></code>;<br>
+                            4.1.4. Deform the sampled image: <code>I<sub>fx</sub> &#x2190; &#x3C6;<sub>syn</sub> &#x2218; &#x3C6;<sub>aug</sub>(I<sub>0</sub>)</code>;<br>
                             4.1.5. Append the deformed images and the DDF: <code>D<sup>syn</sup> &#x2190; D<sup>syn</sup> &#x222A; {(I<sub>mv</sub>, I<sub>fx</sub>, &#x3C6;<sub>syn</sub>)}</code>;
                         </div>
                     </p>
