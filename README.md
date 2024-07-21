@@ -4,8 +4,8 @@
 <a href="https://jianqingzheng.github.io/def_diff_rec/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjianqingzheng.github.io%2Fdef_diff_rec%2F&up_message=accessible&up_color=darkcyan&down_message=inaccessible&down_color=darkgray&label=Project%20Page"></a>
 [![arXiv](https://img.shields.io/badge/arXiv-2407.07295-b31b1b.svg)](https://doi.org/10.48550/arXiv.2407.07295)
 
-![header](docs/static/images/demo_3d_2.gif)
-![header](docs/static/images/demo_3d_3x3.gif)
+<img alt="Website" src="docs/static/images/demo_3d_2.gif" style="width: 50%; display: inline-block;" />
+<img alt="Website" src="docs/static/images/demo_3d_3x3.gif" style="width: 50%; display: inline-block;" />
 </div>
 
 
