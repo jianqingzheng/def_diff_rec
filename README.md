@@ -6,9 +6,9 @@
 
 </div>
 
-<div style="text-align:center;">
-<img alt="Website" src="docs/static/images/demo_3d_2.gif" style="display: inline-block;" />
-<img alt="Website" src="docs/static/images/demo_3d_3x3.gif" style="display: inline-block;" />
+<div style="text-align:center; width: 100%;">
+<img alt="Website" src="docs/static/images/demo_3d_2.gif" style="width: 50%; display: inline-block;" />
+<img alt="Website" src="docs/static/images/demo_3d_3x3.gif" style="width: 50%; display: inline-block;" />
 </div>
 
 
