@@ -6,6 +6,8 @@
 
 </div>
 
+![header](docs/static/images/demo_3d_2.gif)
+
 Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformation for Image Manipulation and Synthesis](https://doi.org/10.48550/arXiv.2407.07295)
 
 
