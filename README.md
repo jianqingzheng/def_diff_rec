@@ -5,6 +5,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2407.07295-b31b1b.svg)](https://doi.org/10.48550/arXiv.2407.07295)
 
 ![header](docs/static/images/demo_3d_2.gif)
+![header](docs/static/images/demo_3d_3x3.gif)
 </div>
 
 
