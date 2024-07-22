@@ -7,8 +7,10 @@
 </div>
 
 <div style="text-align:center; width: 100%; display: flex; justify-content: space-between;">
-<img alt="Website" src="docs/static/images/demo_3d_2.gif" style="width: 50%; display: inline-block;" />
-<img alt="Website" src="docs/static/images/demo_3d_3x3.gif" style="width: 50%; display: inline-block;" />
+<p>
+<img alt="Website" src="docs/static/images/demo_3d_2.gif" style="width: 49%; display: inline-block;" />
+<img alt="Website" src="docs/static/images/demo_3d_3x3.gif" style="width: 49%; display: inline-block;" />
+</p>
 </div>
 
 
