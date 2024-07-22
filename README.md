@@ -12,7 +12,9 @@
     <td><img src="docs/static/images/demo_3d_3x3.gif" alt="Website" width="100%" /></td>
   </tr>
   <tr>
+    <td>
   Examples of deformation diffusion-and-recovery in pulmonary CT scans (Green: Original shape, Blue: Deformed shape)
+    </td>
   <tr>
 </table>
 
