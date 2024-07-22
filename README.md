@@ -6,12 +6,11 @@
 
 </div>
 
-<table style="caption-side: bottom; border-collapse: collapse;">
+<table>
   <tr>
     <td><img src="docs/static/images/demo_3d_2.gif" alt="Website" width="100%" /></td>
     <td><img src="docs/static/images/demo_3d_3x3.gif" alt="Website" width="100%" /></td>
   </tr>
-  <caption>Examples of deformation diffusion-and-recovery in pulmonary CT scans (Green: Original shape, Blue: Deformed shape)</caption>
 </table>
 
 Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformation for Image Manipulation and Synthesis](https://doi.org/10.48550/arXiv.2407.07295)
