@@ -1,0 +1,29 @@
+data_name: cmr
+net_name: recresacnet
+ndims: 2
+img_size: 256
+batchsize: 1
+ddf_pad_mode: border
+device: cuda
+img_pad_mode: zeros
+num_input_chn: 1
+padding_mode: zeros
+resample_mode: bicubic
+timesteps: 80
+v_scale: 4.0e-05
+patients_list: []
+# =========================
+# TRAINING SETTING
+epoch: 10000
+epoch_per_save: 1
+lr: 0.0001
+noise_scale: 0.1
+# =========================
+# AUGMENTATION SETTING
+model_id_str: '000000'
+start_noise_step: 48
+noise_step: 2
+aug_coe: 32                  # how many times each sample will be augmented
+aug_img_savepath: Data/Aug_data/cmr/img/
+aug_msk_savepath: Data/Aug_data/cmr/msk/
+aug_ddf_savepath: Data/Aug_data/cmr/ddf/
