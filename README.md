@@ -77,7 +77,7 @@ install packages
 [![Numpy](https://img.shields.io/badge/Numpy-1.19.5-lightblue)](https://numpy.org)
 
 ```shell
-pip install tensorflow==2.3.1
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
 pip install numpy==1.19.5
 ```
 
