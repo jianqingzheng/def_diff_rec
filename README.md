@@ -8,8 +8,8 @@
 
 <table>
   <tr>
-    <td><img src="docs/static/images/demo_3d_2.gif" alt="Website" width="100%" /></td>
-    <td><img src="docs/static/images/demo_3d_3x3.gif" alt="Website" width="100%" /></td>
+    <td><img src="docs/static/images/demo_3d_2.gif" alt="demo1" width="100%" /></td>
+    <td><img src="docs/static/images/demo_3d_3x3.gif" alt="demo2" width="100%" /></td>
   </tr>
 </table>
 
@@ -21,6 +21,14 @@ Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformatio
 ---
 ### Contents ###
 - [0. Brief Introduction](#0-brief-intro)
+- [1. Installation](#1-installation)
+- [2. Usage](#2-usage)
+  - [2.1. Setup](#21-setup)
+  - [2.2. Training (~1 month)](#22-training-1-month)
+  - [2.3. Inference](#23-inference)
+- [3. Demo](#3-demo)
+- [4. Citing this work](#4-citing-this-work)
+
 
 ---
 
@@ -52,7 +60,131 @@ The main contributions include:
 </ul>
 
 ---
-The code is coming
+## 1. Installation ##
+
+Clone code from Github repo: https://github.com/jianqingzheng/def_diff_rec.git
+```shell
+git clone https://github.com/jianqingzheng/def_diff_rec.git
+cd def_diff_rec/
+```
+
+
+install packages
+
+[![OS](https://img.shields.io/badge/OS-Windows%7CLinux-darkblue)]()
+[![PyPI pyversions](https://img.shields.io/badge/Python-3.8-blue)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1+cu113-lightblue)](https://pytorch.org/)
+[![Numpy](https://img.shields.io/badge/Numpy-1.19.5-lightblue)](https://numpy.org)
+
+```shell
+pip install tensorflow==2.3.1
+pip install numpy==1.19.5
+```
+
+> Other versions of the packages could also be applicable
+
+
+
+---
+## 2. Usage ##
+
+### 2.1. Setup ###
+
+Directory layout:
+```
+[$DOWNLOAD_DIR]/def_diff_rec/ 
+├── Config/
+|   |   # configure file (.yaml files)
+|   └── config_[$data_name].yaml
+├── Data/
+|   ├── Src_data/[$data_name]/
+|   |   |   # processed image data for DRDM training (.nii|.nii.gz files)
+|   |   ├── 0001.nii.gz
+|   |   └── ...
+|   ├── Tgt_data/[$data_name]/
+|   |	├── Tr/
+|   |   |   |   # image for deformation (.nii|.nii.gz files)
+|   |   |   ├── 0001.nii.gz
+|   |   |   └── ...
+|   |	└── Gt/
+|   |       |   # label for deformation (.nii|.nii.gz files)
+|   |       ├── 0001.nii.gz
+|   |       └── ...
+|   └── Aug_data/[$data_name]/
+|       |   # augmented data will be export to here (.nii|.nii.gz files)
+|    	├── img/
+|       |   |   # deformed image (.nii|.nii.gz files)
+|       |   ├── 0001.nii.gz
+|       |   └── ...
+|    	├── msk/
+|       |   |   # deformed label (.nii|.nii.gz files)
+|       |   ├── 0001.nii.gz
+|       |   └── ...
+|    	└── ddf/
+|           |   # deformation field (.nii|.nii.gz files)
+|           ├── 0001.nii.gz
+|           └── ...
+├── models/
+|   └── [$data_name]-[$model_name]/
+|       |   # the files of model parameters (.pth files)
+|       ├── [$epoch_id]_[$data_name]_[$model_name].pth
+|       └── ...
+└── ...
+```
+
+Configuration setting:
+
+<div align="center">
+	
+| Argument              | Example           | Description                                	|
+| --------------------- | ----------------- |----------------------------------------------|
+| `--data_name` 	    |'cmr', 'lct'        | The data folder name                    |
+| `--net_name` 	        |'recresacnet'      | The network name                    |
+| `--ndims` 	        |2, 3                | The dimension of image                    |
+| `--num_input_chn` 	|1, 3                | The channel number of input image               |
+| `--img_size` 	        |256, 128            | The size of image                    |
+| `--timesteps` 	    |80                 | The time step number for deformation             |
+| `--v_scale` 	        |4.0e-05             | The time step number for deformation             |
+| `--batchsize` 	    |64, 4               | The batch size for training                    |
+| `--ddf_pad_mode` 	    |'border', 'zeros'   | The padding mode for integrating deformation field   |
+| `--img_pad_mode` 	    |'border', 'zeros'   | The padding mode for resampling image    |
+| `--resample_mode` 	|'nearest', 'bicubic'| The interpolation mode for resampling image     |
+| `--device` 	        |'cuda', 'cpu'       | The used device     |
+| `--patients_list` 	|[], [1], [1,2]       | The selected list of subject for augmentation     |
+</div>
+
+> configuration settings are edited in `[$DOWNLOAD_DIR]/def_diff_rec/Config/*.yaml`
+
+
+### 2.2. Training (~1 month) ###
+
+1. Run ```python DRDM_train.py --config Config/config_$data_name.yaml```
+2. Check the saved model in ```models/$data_name-$model_name/```
+
+### 2.3. Augmentation ###
+
+1. Run ```python DRDM_augment.py --config Config/config_$data_name.yaml```
+2. Check the output data in ```Data/Aug_data/$data_name/*```
+
+---
+## 3. Demo ##
+
+coming soon
+
 ---
 
+## 4. Citing this work
 
+Any publication that discloses findings arising from using this source code or the network model should cite:
+
+```bibtex
+@article{zheng2024deformation,
+  title={Deformation-Recovery Diffusion Model (DRDM): Instance Deformation for Image Manipulation and Synthesis},
+  author={Zheng, Jian-Qing and Mo, Yuanhan and Sun, Yang and Li, Jiahua and Wu, Fuping and Wang, Ziyang and Vincent, Tonia and Papie{\.z}, Bart{\l}omiej W},
+  journal={arXiv preprint arXiv:2407.07295},
+  doi = {https://doi.org/10.48550/arXiv.2407.07295},
+  url = {https://doi.org/10.48550/arXiv.2407.07295},
+  keywords = {Image Synthesis, Generative Model, Data Augmentation, Segmentation, Registration}
+  year={2024}
+}    
+```

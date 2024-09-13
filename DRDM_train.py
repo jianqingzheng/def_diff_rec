@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser()
 
 # config_file_path = 'Config/config_cmr.yaml'
 parser.add_argument(
-        "--config_path",
+        "--config",
         "-C",
         help="Path for the config file",
         type=str,

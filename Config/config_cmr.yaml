@@ -11,7 +11,6 @@ padding_mode: zeros
 resample_mode: bicubic
 timesteps: 80
 v_scale: 4.0e-05
-patients_list: []
 # =========================
 # TRAINING SETTING
 epoch: 10000
@@ -20,6 +19,7 @@ lr: 0.0001
 noise_scale: 0.1
 # =========================
 # AUGMENTATION SETTING
+patients_list: []
 model_id_str: '000000'
 start_noise_step: 48
 noise_step: 2

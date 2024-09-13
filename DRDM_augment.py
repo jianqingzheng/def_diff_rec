@@ -26,7 +26,7 @@ EPS = 10e-8
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-        "--config_path",
+        "--config",
         "-C",
         help="Path for the config file",
         type=str,
