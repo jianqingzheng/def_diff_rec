@@ -3,6 +3,7 @@
 
 <a href="https://jianqingzheng.github.io/def_diff_rec/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjianqingzheng.github.io%2Fdef_diff_rec%2F&up_message=online&up_color=darkcyan&down_message=offline&down_color=darkgray&label=Project%20Page"></a>
 [![arXiv](https://img.shields.io/badge/arXiv-2407.07295-b31b1b.svg)](https://doi.org/10.48550/arXiv.2407.07295)
+[![Explore DRDM in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb)
 
 </div>
 
@@ -174,7 +175,10 @@ Configuration setting:
 ---
 ## 3. Demo ##
 
-coming soon
+A demo can be found in the provided [notebook](https://github.com/jianqingzheng/res_aligner_net/blob/main/def_diff_rec.ipynb).
+
+Alternatively, it can be easily run via [![Explore DRDM in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb).
+
 
 ---
 
