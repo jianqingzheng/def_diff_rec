@@ -175,7 +175,7 @@ Configuration setting:
 ---
 ## 3. Demo ##
 
-A demo can be found in the provided [notebook](https://github.com/jianqingzheng/res_aligner_net/blob/main/def_diff_rec.ipynb).
+A demo can be found in the provided [notebook](https://github.com/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb).
 
 Alternatively, it can be easily run via [![Explore DRDM in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb).
 
