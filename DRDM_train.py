@@ -38,7 +38,7 @@ args = parser.parse_args()
 #=======================================================================================================================
 
 # Load the YAML file into a dictionary
-with open(args.config_path, 'r') as file:
+with open(args.config, 'r') as file:
     hyp_parameters = yaml.safe_load(file)
     print(hyp_parameters)
 

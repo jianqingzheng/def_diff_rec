@@ -75,10 +75,14 @@ install packages
 [![PyPI pyversions](https://img.shields.io/badge/Python-3.8-blue)](https://pypi.python.org/pypi/ansicolortags/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12.1+cu113-lightblue)](https://pytorch.org/)
 [![Numpy](https://img.shields.io/badge/Numpy-1.19.5-lightblue)](https://numpy.org)
+[![Pyquaternion](https://img.shields.io/badge/Pyquaternion-0.9.9-lightblue)](https://pypi.org/project/pyquaternion/)
+[![PyDICOM](https://img.shields.io/badge/PyDICOM-2.4.4-lightblue)](https://pydicom.github.io/)
 
 ```shell
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install numpy==1.19.5
+pip install pyquaternion==0.9.9
+pip install pydicom==2.4.4
 ```
 
 > Other versions of the packages could also be applicable

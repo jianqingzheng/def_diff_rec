@@ -1,13 +1,13 @@
 import os
 import torch
-from torch import nn, optim
-from torch.autograd.variable import Variable
-from torchvision import transforms, datasets
-from torchvision.utils import save_image
-import torch.nn.functional as F
-import scipy.ndimage as spimg
-import pyquaternion as quater
-import random
+# from torch import nn, optim
+# from torch.autograd.variable import Variable
+# from torchvision import transforms, datasets
+# from torchvision.utils import save_image
+# import torch.nn.functional as F
+# import scipy.ndimage as spimg
+# import pyquaternion as quater
+# import random
 import numpy as np
 from scipy.ndimage import gaussian_filter, binary_dilation, binary_erosion, generate_binary_structure
 import pydicom

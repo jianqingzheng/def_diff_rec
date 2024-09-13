@@ -41,7 +41,7 @@ args = parser.parse_args()
 # config_path = 'Config/config_lct.yaml'
 
 # Load the YAML file into a dictionary
-with open(args.config_path, 'r') as file:
+with open(args.config, 'r') as file:
     hyp_parameters = yaml.safe_load(file)
     print(hyp_parameters)
 # hyp_parameters["aug_img_savepath"] = os.path.join(hyp_parameters["aug_img_savepath"],hyp_parameters["data_name"],'')
