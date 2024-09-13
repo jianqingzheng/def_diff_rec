@@ -197,6 +197,6 @@ for epoch in range(initial_epoch,hyp_parameters["epoch"]):
             print(f"saved in {save_dir}")
         else:
             os.makedirs(os.path.dirname(model_save_path))
-        break   # FOR TESTING
+        # break   # FOR TESTING
         torch.save(Deformddpm.network.state_dict(), save_dir)
         
