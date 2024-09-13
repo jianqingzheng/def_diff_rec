@@ -167,8 +167,9 @@ Configuration setting:
 
 ### 2.3. Augmentation ###
 
-1. Run ```python DRDM_augment.py --config Config/config_$data_name.yaml```
-2. Check the output data in ```Data/Aug_data/$data_name/*```
+1. Put the data to augment in `Data/Tgt_data/$data_name/`
+2. Run ```python DRDM_augment.py --config Config/config_$data_name.yaml```
+3. Check the output data in ```Data/Aug_data/$data_name/*```
 
 ---
 ## 3. Demo ##
