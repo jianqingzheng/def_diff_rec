@@ -149,7 +149,7 @@ Configuration setting:
 | `--num_input_chn` 	|1, 3                | The channel number of input image               |
 | `--img_size` 	        |256, 128            | The size of image                    |
 | `--timesteps` 	    |80                 | The time step number for deformation             |
-| `--v_scale` 	        |4.0e-05             | The time step number for deformation             |
+| `--v_scale` 	        |4.0e-05             | The minimal std scale of deformation velocity field  |
 | `--batchsize` 	    |64, 4               | The batch size for training                    |
 | `--ddf_pad_mode` 	    |'border', 'zeros'   | The padding mode for integrating deformation field   |
 | `--img_pad_mode` 	    |'border', 'zeros'   | The padding mode for resampling image    |
