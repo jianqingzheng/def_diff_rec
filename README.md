@@ -164,13 +164,30 @@ Configuration setting:
 ### 2.2. Training (~1 month) ###
 
 1. Run ```python DRDM_train.py --config Config/config_$data_name.yaml```
-2. Check the saved model in ```models/$data_name-$model_name/```
+2. Check the saved model in `models/$data_name_$model_name/`
+
+\* Example for training (default):
+
+1. Run 
+```shell
+python DRDM_train.py --config Config/config_lct.yaml
+```
+2. Check the saved model in `models/lct_recresacnet/`
 
 ### 2.3. Augmentation ###
 
 1. Put the data to augment in `Data/Tgt_data/$data_name/`
 2. Run ```python DRDM_augment.py --config Config/config_$data_name.yaml```
-3. Check the output data in ```Data/Aug_data/$data_name/*```
+3. Check the output data in `Data/Aug_data/$data_name/`
+
+\* Example for training (default):
+
+1. Put the data to augment in `Data/Tgt_data/lct/`
+2. Run 
+```shell
+python DRDM_augment.py --config Config/config_lct.yaml
+```
+3. Check the output data in `Data/Aug_data/lct/`
 
 ---
 ## 3. Demo ##
