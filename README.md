@@ -210,7 +210,7 @@ Any publication that discloses findings arising from using this source code or t
   journal={arXiv preprint arXiv:2407.07295},
   doi = {https://doi.org/10.48550/arXiv.2407.07295},
   url = {https://doi.org/10.48550/arXiv.2407.07295},
-  keywords = {Image Synthesis, Generative Model, Data Augmentation, Segmentation, Registration}
+  keywords = {Image Synthesis, Generative Model, Data Augmentation, Segmentation, Registration},
   year={2024}
 }    
 ```
