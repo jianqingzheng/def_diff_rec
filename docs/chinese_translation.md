@@ -7,9 +7,10 @@
 
 本文提出了一种全新的扩散生成模型，**形变恢复扩散模型（Deformation-Recovery Diffusion Model, DRDM）**，旨在通过生成形变场而非直接生成图像，解决上述问题。
 
-![image](https://github.com/jianqingzheng/def_diff_rec/docs/static/images/graphic_abstract.png)
+![image](https://github.com/jianqingzheng/def_diff_rec/blob/main/docs/static/images/graphic_abstract.png)
 
 > **论文链接**：[https://arxiv.org/abs/2407.07295](https://arxiv.org/abs/2407.07295)
+
 > **项目地址**：[https://jianqingzheng.github.io/def_diff_rec/](https://jianqingzheng.github.io/def_diff_rec/)
 
 ## 研究背景 ##
@@ -78,4 +79,4 @@ DRDM不仅可以用于数据增强与合成，还可以扩展至更多场景：
 
 
 > 扫描下方二维码查看DRDM项目主页：
-![image](https://github.com/jianqingzheng/def_diff_rec/docs/drdm_project_page.png)
+![image](https://github.com/jianqingzheng/def_diff_rec/blob/main/docs/drdm_project_page.png)
