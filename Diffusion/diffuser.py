@@ -156,7 +156,7 @@ class DeformDDPM(nn.Module):
         # Denosing image
         for i in range(T[1] - 1, -1, -1):
             t = torch.tensor(np.array([i])).to(self.device)
-            pre_dvf_I = self.backward(img_rec, t,rec_num=None)
+            pre_dvf_I = self.backward(img_rec, t)
             ddf_comp = self.ddf_stn_full(ddf_comp, pre_dvf_I) + pre_dvf_I
             # apply to image
             img_rec = self.img_stn(img_org.clone().detach(), ddf_comp)
