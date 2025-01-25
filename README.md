@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Deformation-Recovery Diffusion Model (DRDM): <br /><small>Instance Deformation for Image Manipulation and Synthesis</small> </h1>
+<h1> <span style="color: red;">D</span>eformation-<span style="color: red;">R</span>ecovery <span style="color: red;">D</span>iffusion <span style="color: red;">M</span>odel (DRDM): <br /><small>Instance Deformation for Image Manipulation and Synthesis</small> </h1>
 
 <a href="https://jianqingzheng.github.io/def_diff_rec/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjianqingzheng.github.io%2Fdef_diff_rec%2F&up_message=online&up_color=darkcyan&down_message=offline&down_color=darkgray&label=Project%20Page"></a>
 [![arXiv](https://img.shields.io/badge/arXiv-2407.07295-b31b1b.svg)](https://doi.org/10.48550/arXiv.2407.07295)
