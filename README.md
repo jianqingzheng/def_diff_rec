@@ -1,6 +1,6 @@
 <div align="center">
 <h1> 
-<img src="docs/static/images/drdm_icon.png" alt="DRDM Icon" style="width: 40px; height: 32px; vertical-align: -8px;">
+<img src="docs/static/images/drdm_icon.png" alt="DRDM Icon" style="width: 40px; height: 32px; vertical-align: -12px;">
 Deformation-Recovery Diffusion Model (DRDM): <br />
 <small>Instance Deformation for Image Manipulation and Synthesis</small> 
 </h1>
