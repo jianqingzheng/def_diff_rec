@@ -31,7 +31,7 @@ Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformatio
   - [2.1. Setup](#21-setup)
   - [2.2. Training (~1 month)](#22-training-1-month)
   - [2.3. Inference](#23-inference)
-- [3. Demo](#3-demo)
+- [3. Demo](#3-demo-and-tutorial)
 - [4. Citing this work](#4-citing-this-work)
 
 
@@ -194,11 +194,13 @@ python DRDM_augment.py --config Config/config_lct.yaml
 3. Check the output data in `Data/Aug_data/lct/`
 
 ---
-## 3. Demo ##
+## 3. Demo and Tutorial ##
 
 A demo can be found in the provided [notebook](https://github.com/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb).
 
 Alternatively, it can be easily run via [![Explore DRDM in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb).
+
+Additionally, a detailed tutorial can be found in the provided <a href="https://zread.ai/jianqingzheng/def_diff_rec"><img alt="User Manual" src="https://img.shields.io/website?url=https%3A%2F%2Fzread.ai%2Fjianqingzheng%2Fdef_diff_rec%2F&up_message=online&up_color=darkgreen&down_message=offline&down_color=darkgray&label=User%20Manual"></a> (powered by Zread.ai).
 
 
 ---
