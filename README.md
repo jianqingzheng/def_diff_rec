@@ -31,7 +31,7 @@ Code for paper [Deformation-Recovery Diffusion Model (DRDM): Instance Deformatio
   - [2.1. Setup](#21-setup)
   - [2.2. Training (~1 month)](#22-training-1-month)
   - [2.3. Inference](#23-inference)
-- [3. Demo](#3-demo-and-tutorial)
+- [3. Demo and Tutorial](#3-demo-and-tutorial)
 - [4. Citing this work](#4-citing-this-work)
 
 
