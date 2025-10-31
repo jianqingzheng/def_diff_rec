@@ -10,8 +10,6 @@ Deformation-Recovery Diffusion Model (DRDM): <br />
 <br />
 [![User_Manual](https://img.shields.io/badge/UserManual-zread.ai-darkgreen)](https://zread.ai/jianqingzheng/def_diff_rec)
 [![User_Manual](https://img.shields.io/badge/UserManual-deepwiki-darkgreen)](https://deepwiki.com/jianqingzheng/def_diff_rec)
-
-
 </div>
 
 <table>
