@@ -5,6 +5,7 @@ Deformation-Recovery Diffusion Model (DRDM): <br />
 </h1>
 
 <a href="https://jianqingzheng.github.io/def_diff_rec/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fjianqingzheng.github.io%2Fdef_diff_rec%2F&up_message=online&up_color=darkcyan&down_message=offline&down_color=darkgray&label=Project%20Page"></a>
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.media.2026.103987-darkyellow)](https://doi.org/10.1016/j.media.2026.103987)
 [![arXiv](https://img.shields.io/badge/arXiv-2407.07295-b31b1b.svg)](https://doi.org/10.48550/arXiv.2407.07295)
 [![Explore DRDM in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jianqingzheng/def_diff_rec/blob/main/def_diff_rec.ipynb)
 <br />
