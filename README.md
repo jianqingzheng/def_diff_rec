@@ -167,7 +167,7 @@ Configuration setting:
 > configuration settings are edited in `[$DOWNLOAD_DIR]/def_diff_rec/Config/*.yaml`
 
 
-### 2.2. Training (~1 month) ###
+### 2.2. Training (~1 GPU x month) ###
 
 1. Run ```python DRDM_train.py --config Config/config_$data_name.yaml```
 2. Check the saved model in `models/$data_name_$model_name/`
