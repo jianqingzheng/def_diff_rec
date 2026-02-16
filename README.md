@@ -218,7 +218,7 @@ Any publication that discloses findings arising from using this source code or t
   title={Deformation-Recovery Diffusion Model (DRDM): Instance Deformation for Image Manipulation and Synthesis},
   author={Zheng, Jian-Qing and Mo, Yuanhan and Sun, Yang and Li, Jiahua and Wu, Fuping and Wang, Ziyang and Vincent, Tonia and Papie{\.z}, Bart{\l}omiej W},
   journal={arXiv preprint arXiv:2407.07295},
-  doi = {https://doi.org/10.48550/arXiv.2407.07295},
+  doi = {10.48550/arXiv.2407.07295},
   url = {https://doi.org/10.48550/arXiv.2407.07295},
   keywords = {Image Synthesis, Generative Model, Data Augmentation, Segmentation, Registration},
   year={2024}
