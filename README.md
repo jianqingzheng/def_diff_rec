@@ -211,6 +211,7 @@ Additionally, detailed tutorials can be found in the provided [![User_Manual](ht
 ## 4. Citing this work
 
 Any publication that discloses findings arising from using this source code or the network model should cite:
+- Zheng, J., Mo, Y., Sun, Y., Li, J., Wu, F., Wang, Z., Vincent, T., & Papież, B. W. (2026). Deformation-Recovery diffusion model (DRDM): Instance deformation for image manipulation and synthesis. _Medical Image Analysis_, 110, 103987. https://doi.org/10.1016/j.media.2026.103987
 
 ```bibtex
 @article{zheng2024deformation,
