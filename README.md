@@ -214,13 +214,14 @@ Any publication that discloses findings arising from using this source code or t
 - Zheng, J., Mo, Y., Sun, Y., Li, J., Wu, F., Wang, Z., Vincent, T., & Papież, B. W. (2026). Deformation-Recovery diffusion model (DRDM): Instance deformation for image manipulation and synthesis. _Medical Image Analysis_, 110, 103987. https://doi.org/10.1016/j.media.2026.103987
 
 ```bibtex
-@article{zheng2024deformation,
+@article{zheng2026deformation,
   title={Deformation-Recovery Diffusion Model (DRDM): Instance Deformation for Image Manipulation and Synthesis},
   author={Zheng, Jian-Qing and Mo, Yuanhan and Sun, Yang and Li, Jiahua and Wu, Fuping and Wang, Ziyang and Vincent, Tonia and Papie{\.z}, Bart{\l}omiej W},
-  journal={arXiv preprint arXiv:2407.07295},
-  doi = {10.48550/arXiv.2407.07295},
-  url = {https://doi.org/10.48550/arXiv.2407.07295},
+  journal={Medical Image Analysis},
+  pages={103987},
+  doi = {10.1016/j.media.2026.103987},
+  url = {https://doi.org/10.1016/j.media.2026.103987},
   keywords = {Image Synthesis, Generative Model, Data Augmentation, Segmentation, Registration},
-  year={2024}
+  year={2026}
 }    
 ```
